@@ -1,15 +1,12 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  get_payload_data:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Get payload data
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: wojciechnow/actions@master
-      with:
-        who-to-greet: 'Wojtek'
+    - name: Get payload data
+      uses: wojciechnow/actions@moreinfo
     # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    # name: Get the output time
+    # run: echo "The time was ${{ steps.hello.outputs.time }}"
