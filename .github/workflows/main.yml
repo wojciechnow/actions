@@ -3,7 +3,7 @@ on: push
 jobs:
   get_payload_data:
     env:
-      w.nowacky: https://softwarebrothers.co/
+      wojciech.nowacki: https://softwarebrothers.co/
       jakub.sapalski: https://softwarebrothers.co/ 
     runs-on: macos-latest
     name: Run tests on specific branch
