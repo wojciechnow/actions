@@ -2,6 +2,9 @@ on: push
 
 jobs:
   get_payload_data:
+    env:
+      w.nowacky: https://softwarebrothers.co/
+      jakub.sapalski: https://softwarebrothers.co/ 
     runs-on: macos-latest
     name: Run tests on specific branch
     steps:
@@ -11,11 +14,11 @@ jobs:
         node-version: 12
     - name: run tests
       uses: wojciechnow/actions@moreinfo
-      id: dupsko
+      id: payloadInfo
     - run: npm install
     - run: npm run test
       env:
-        pusher: ${{ steps.dupsko.outputs.pusher }}  
+        pusher: ${{ steps.payloadInfo.outputs.pusher }}  
     # Use the output from the `hello` step
     # name: Get the output time
     # run: echo "The time was ${{ steps.hello.outputs.time }}"
