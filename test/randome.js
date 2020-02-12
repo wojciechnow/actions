@@ -29,10 +29,11 @@ describe('my test', () => {
     const pusherEmail = process.env.pusher;
     const name = pusherEmail.split('@')[0];
     console.log(name);
+
     // testing purpose comment
     it('Just testing flow for selenium in SB company', async () => {
         await driver.manage().window().maximize();
-        await driver.get(process.env.user);
+        await driver.get(process.env.name);
         await driver.findElement(By.linkText("Services")).click();
         await driver.sleep(2000);
         await driver.wait(until.elementIsVisible(driver.findElement(By.xpath("//a[@aria-label= 'dismiss cookie message' and @role='button']")))).click();
