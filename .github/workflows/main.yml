@@ -2,7 +2,7 @@ on: push
 
 jobs:
   get_payload_data:
-    runs-on: windows-latest
+    runs-on: macos-latest
     name: Run tests on specific branch
     steps:
     - uses: actions/checkout@v1
