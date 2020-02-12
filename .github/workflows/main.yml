@@ -1,17 +1,16 @@
-on: [push]
+on: push
 
 jobs:
   get_payload_data:
     runs-on: windows-latest
     name: Run tests on specific branch
     steps:
-    - name: Setup env
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
        node-version: 12
     - name: run tests
-    - uses: wojciechnow/actions@moreinfo
+      uses: wojciechnow/actions@moreinfo
     - run: npm install
     - run: npm run test
     # Use the output from the `hello` step
