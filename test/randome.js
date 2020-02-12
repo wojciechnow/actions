@@ -27,6 +27,7 @@ describe('my test', () => {
     });
 
     const x = process.env.pusher;
+    console.log(x)
     if (x.includes('wojciech')) {
         it('Just testing flow for selenium in SB company', async () => {
             await driver.manage().window().maximize();
