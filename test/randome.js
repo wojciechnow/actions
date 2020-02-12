@@ -28,7 +28,7 @@ describe('my test', () => {
 
     const x = process.env.pusher;
     console.log(x)
-    if (x.includes('wojciech')) {
+    if (x.includes('artur')) {
         it('Just testing flow for selenium in SB company', async () => {
             await driver.manage().window().maximize();
             await driver.get('https://softwarebrothers.co/');
