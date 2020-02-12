@@ -28,6 +28,7 @@ describe('my test', () => {
 
     const pusherEmail = process.env.pusher;
     const name = pusherEmail.split('@')[0];
+    console.log(name);
     it('Just testing flow for selenium in SB company', async () => {
         await driver.manage().window().maximize();
         await driver.get(process.env.user);
